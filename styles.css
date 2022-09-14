@@ -235,6 +235,7 @@ a {
 
   .card {
     flex-direction: column;
+    margin-bottom: 0px;
   }
 
   #histories {
