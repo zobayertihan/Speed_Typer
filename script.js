@@ -46,8 +46,9 @@ const typeController = (e) => {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    errorCount++;
   }
-
+  // console.log(errorCount)
   // check if given question text is equal to user typed text
   if (questionText === userText) {
     gameOver();
@@ -121,8 +122,8 @@ const start = () => {
     }
     count--;
   }, 1000);
+  console.log(count)
 };
-
 // START Countdown
 startBtn.addEventListener("click", start);
 
