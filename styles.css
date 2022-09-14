@@ -125,7 +125,9 @@ body {
 .title2 {
   color: white;
   display: block;
+
 }
+
 
 .buttons {
   display: flex;
@@ -145,6 +147,22 @@ button {
   border-radius: 10px;
   border: 2px solid #9dffad;
   cursor: pointer;
+}
+
+a {
+  margin-left: 100px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  width: 300px;
+  height: 50px;
+  color: white;
+  background-color: #171717;
+  border-radius: 10px;
+  border: 2px solid #9dffad;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 #histories {
@@ -174,6 +192,25 @@ button {
   margin-bottom: 30px;
 }
 
+.card2 {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 30px;
+  color: white;
+  border-radius: 15px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(92.49deg,
+      rgba(255, 255, 255, 0.1) 0.18%,
+      rgba(255, 255, 255, 0.05) 99.85%);
+  backdrop-filter: blur(5px);
+  margin-bottom: 30px;
+}
+
 #modal-background {
   background: rgb(255, 255, 255);
   background: linear-gradient(92.49deg,
@@ -186,6 +223,9 @@ button {
   top: 0;
 }
 
+.btn-blog {
+  text-decoration: none;
+}
 
 @media only screen and (max-width: 700px) {
   .box-container {
@@ -203,11 +243,3 @@ button {
     justify-content: space-around;
   }
 }
-
-
-
-/* .column {
-  float: left;
-  width: 25%;
-  padding: 0 10px;
-} */

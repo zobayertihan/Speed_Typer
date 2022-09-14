@@ -83,7 +83,7 @@ const gameOver = () => {
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
-    <button onclick="closeModal()">Close</button>
+    <button onclick="closeModal();window.location.reload()">Close</button>
   `;
 
   addHistory(questionText, timeTaken, errorCount);
@@ -101,28 +101,34 @@ const closeModal = () => {
 };
 
 const start = () => {
+  let count = 3;
   // If already started, do not start again
   if (startTime) return;
 
-  let count = 3;
+  // let count = 3;
   countdownOverlay.style.display = "flex";
-
+  console.log(count)
   const startCountdown = setInterval(() => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
-
+    console.log(count)
     // finished timer
     if (count == 0) {
+      console.log(count)
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
-
       clearInterval(startCountdown);
+      // if (clearInterval(startCountdown)) {
+      //   console.log("OK")
+      // }
       startTime = new Date().getTime();
+      console.log(count)
     }
     count--;
-  }, 1000);
-  console.log(count)
+  },
+    1000);
+
 };
 // START Countdown
 startBtn.addEventListener("click", start);
